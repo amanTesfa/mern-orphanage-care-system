@@ -9,7 +9,7 @@ import VisitorsPage from "./pages/VisitorsPage";
 import InventoryPage from "./pages/InventoryPage";
 import AttendancePage from "./pages/AttendancePage";
 import SponsorPage from "./pages/SponsorPage";
-import ExpensePage from "./pages/ExpensePage";
+import ReportPage from "./pages/ExpensePage";
 import SponsorshipPage from "./pages/SponsorshipPage";
 
 const App: React.FC = () => {
@@ -26,7 +26,7 @@ const App: React.FC = () => {
           <Route path="inventory" element={<InventoryPage />} />
           <Route path="attendance" element={<AttendancePage />} />
           <Route path="sponsors" element={<SponsorPage />} />
-          <Route path="expenses" element={<ExpensePage />} />
+          <Route path="expenses" element={<ReportPage />} />
           <Route path="sponsorships" element={<SponsorshipPage />} />
         </Route>
       </Routes>
