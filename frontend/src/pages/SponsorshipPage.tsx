@@ -1,4 +1,5 @@
 import React from "react";
+import { useSponsorContext } from "../context/SponsorContext";
 
 type Sponsorship = {
   id: number;
@@ -10,29 +11,9 @@ type Sponsorship = {
   notes?: string;
 };
 
-const initialData: Sponsorship[] = [
-  {
-    id: 1,
-    sponsorName: "Global Aid Foundation",
-    childName: "Amina Khan",
-    startDate: "2025-01-01",
-    endDate: "2025-12-31",
-    status: "Active",
-    notes: "Covers education",
-  },
-  {
-    id: 2,
-    sponsorName: "Hope Trust",
-    childName: "Samuel Okoro",
-    startDate: "2024-06-01",
-    endDate: "2025-05-31",
-    status: "Inactive",
-    notes: "Ended early",
-  },
-];
 
 const SponsorshipPage: React.FC = () => {
-  const [sponsorships, setSponsorships] = React.useState<Sponsorship[]>(initialData);
+  const { sponsorships, setSponsorships } = useSponsorContext();
   const [modalOpen, setModalOpen] = React.useState(false);
   const [editing, setEditing] = React.useState<Sponsorship | null>(null);
 
